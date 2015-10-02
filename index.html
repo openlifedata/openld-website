@@ -32,26 +32,43 @@
             <img src="images/openld-icon.png" width="200">
             <h1>OpenLifeData</h1>
             <p class="lead">Linked Data for the Life Sciences</p>
+
+<!--		action="http://biosearch.openlifedata.org/instance.html" -->
+         <form class="form-inline" role="form" method="GET"
+		action="http://sparql-lodestar.openlifedata.org/describe" 
+		>
+		<!-- name="inst" -->
+             <input type="text" size="40" class="form-control" 
+		name="uri" 
+		value="http://bio2rdf.org/drugbank:DB00001">
+             <button type="submit" class="btn btn-sm">Lookup</button>
+         </form>  
           </div>
         </div>
       </div>
-      
-	  <div class="row">
-        <div class="col-md-4">
-        </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
         <div class="col-md-8">
-		  <p><a href="http://openlifedata.org/network">Network Diagram</a></p>
-          <p><a href="http://s5.semanticscience.org:8890/fct">Facet browser by Virtuoso</a></p>
-		  <p><a href="http://s5.semanticscience.org:8080/lodestar/sparql">SPARQL by lodestar</a></p>
-		  <p><a href="http://s5.semanticscience.org:3000/openlifedata">API by iodocs</a></p>
-		  <p><a href="http://s5.semanticscience.org:8890/sparql">SPARQL by Virtuoso</a></p>
-		  <p><a href="http://sparqles.ai.wu.ac.at/availability">Endpoint Monitoring by SPARQLES</a></p>
-          <p style="height: 60px;"></p>
-		  <p><a href="https://groups.google.com/d/forum/openlifedata">Mailing List</a></p>
-		  <p><a href="https://github.com/openlifedata">codebase</a></p>
+		<p>
+<!--		  <a href="http://lookup.openlifedata.org">lookup</a> | -->
+		  <a href="http://search.openlifedata.org">search</a> |
+		  <a href="http://sparql.openlifedata.org">sparql</a> | 
+
+		  <a href="http://apidocs.openlifedata.org/openlifedata">api</a> |
+<!--		  <a href="http://s5.semanticscience.org:3000/openlifedata">api</a> | --> 
+		  <a href="http://openlifedata.org/network">network</a> |
+		  <a href="https://groups.google.com/d/forum/openlifedata">discuss</a> |
+		  <a href="https://github.com/openlifedata">source</a> 
+<!--		  <a href="http://sparqles.ai.wu.ac.at/availability">monitor</a> -->
+		</p>
+	        <p>
+        	  Virtuoso services: 
+			<a href="http://s5.semanticscience.org:8890/fct">search</a> |
+			<a href="http://s5.semanticscience.org:8890/fct">sparql</a> 
+               </p>
         </div>		
-         <div class="col-md-3">
-        </div>   
+         <div class="col-md-4"></div>   
       </div>   
 			
         
@@ -67,7 +84,7 @@
   <p class="text-center" style="padding-top: 60px;">
     <small>
       Copyright &copy; 2015. 
-      <a href="http://openlifedata.org">openLifeData consortium</a>. 
+      <a href="http://openlifedata.org">the openLD group</a>. 
       All content available via <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>
       &nbsp;&nbsp;<a role="menuitem" href="/feeds/news.xml"><img src="images/feed.png" /></a>
     </small>
