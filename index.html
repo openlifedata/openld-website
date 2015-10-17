@@ -14,6 +14,8 @@
     <link rel="alternate" type="application/rss+xml" title="" href="/feeds/news.xml" />
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/jquery-ui.css">    
+    <link rel="stylesheet" href="css/styles2.css">
+  <!--   <link rel="stylesheet" href="css/styles.css"> -->
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,52 +26,65 @@
   </head>
   <body>
     <div class="container">
-      <div>&nbsp;</div>
 
       <div class="row">
         <div class="col-lg-12">
           <div class="jumbotron">
-            <img src="images/openld-icon.png" width="200">
-            <h1>OpenLifeData</h1>
-            <p class="lead">Linked Data for the Life Sciences</p>
-
-<!--		action="http://biosearch.openlifedata.org/instance.html" -->
-         <form class="form-inline" role="form" method="GET"
-		action="http://sparql-lodestar.openlifedata.org/describe" 
-		>
-		<!-- name="inst" -->
-             <input type="text" size="40" class="form-control" 
-		name="uri" 
-		value="http://bio2rdf.org/drugbank:DB00001">
-             <button type="submit" class="btn btn-sm">Lookup</button>
-         </form>  
+          	  <div class="jumbotron2">
+	            <img src="images/openld-icon.png" width="70">
+	          </div> 
+	          <div class="jumbotron2">
+	            <h1>OpenLifeData</h1>	     
+	            <p class="lead">Linked Data for the Life Sciences</p>
+				<!--		action="http://biosearch.openlifedata.org/instance.html" -->	         	 
+	          </div> 
           </div>
         </div>
       </div>
 
-      <div class="row">
+      <div id="cssmenu">
         <div class="col-md-4"></div>
-        <div class="col-md-8">
-		<p>
-<!--		  <a href="http://lookup.openlifedata.org">lookup</a> | -->
-		  <a href="http://search.openlifedata.org">search</a> |
-		  <a href="http://sparql.openlifedata.org">sparql</a> | 
-
-		  <a href="http://apidocs.openlifedata.org/openlifedata">api</a> |
-<!--		  <a href="http://s5.semanticscience.org:3000/openlifedata">api</a> | --> 
-		  <a href="http://openlifedata.org/network">network</a> |
-		  <a href="https://groups.google.com/d/forum/openlifedata">discuss</a> |
-		  <a href="https://github.com/openlifedata">source</a> 
-<!--		  <a href="http://sparqles.ai.wu.ac.at/availability">monitor</a> -->
-		</p>
-	        <p>
-        	  Virtuoso services: 
-			<a href="http://s5.semanticscience.org:8890/fct">search</a> |
-			<a href="http://s5.semanticscience.org:8890/fct">sparql</a> 
-               </p>
-        </div>		
-         <div class="col-md-4"></div>   
-      </div>   
+        <div class="col-md-8"></div>
+		<ul>
+<!--		  <li><ahref="http://lookup.openlifedata.org">lookup</a> | -->
+<!--		  <li><ahref="http://s5.semanticscience.org:3000/openlifedata">api</a></li> | -->
+<!--		  <li><ahref="http://sparqles.ai.wu.ac.at/availability">monitor</a></li> -->	  
+<!--          <li class='active'><a href='http://www.openlifedata.org/'>Home</a></li> -->
+		  <li><a href="#">search</a>
+		  	<ul>
+			    <li><a href="http://search.openlifedata.org/" target="iframe_a">by Lodestar</a></li>
+			  	<li><a href="http://s5.semanticscience.org:8890/fct" target="iframe_a">by Virtuoso</a></li>
+			  </ul>
+		  </li>
+		  <li><a href="#">sparql</a>
+			  <ul>
+			    <li><a href="http://sparql.openlifedata.org" target="iframe_a">by Lodestar</a></li>
+			  	<li><a href="http://sparql-virtuoso.openlifedata.org/" target="iframe_a">by Virtuoso</a></li>
+			  </ul>
+		  </li>
+		  <li><a href="http://apidocs.openlifedata.org/openlifedata" target="iframe_a">api</a></li>
+		  <li><a href="http://openlifedata.org/network" target="iframe_a">network</a></li>
+		  <li><a href="#">OutLinks</a>
+			  <ul>
+			    <li><a href="https://groups.google.com/forum/#!forum/openlifedata"">DISCUSS</a></li>
+			  	<li><a href="https://github.com/openlifedata">SOURCE</a></li>
+			  </ul>
+		  </li>
+		  <li style="float: right; margin-right:10px;">
+		  	<div >
+			  <form id="searchbox" class="form-inline" role="form" method="GET"		action="http://sparql-lodestar.openlifedata.org/describe" 	target="iframe_a"	>
+						<!-- name="inst" -->
+		            	<input type="text" size="32" class="form-control" 		name="uri" 		value="http://bio2rdf.org/drugbank:DB00001">
+		            	<button type="submit" class="btn btn-sm">Lookup</button>
+		      </form>
+		    </div>
+	      </li> 
+		</ul>
+	         
+      </div>
+      
+      
+      <iframe width="100%" height="1000px" src="http://search.openlifedata.org/" name="iframe_a"></iframe>   
 			
         
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -78,15 +93,17 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/search.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  <script src="js/script2.js"></script>
+<!--   <script src="js/script.js"></script>-->
   
   <div>&nbsp;</div>
   
   <p class="text-center" style="padding-top: 60px;">
     <small>
       Copyright &copy; 2015. 
-      <a href="http://openlifedata.org">the openLD group</a>. 
-      All content available via <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>
-      &nbsp;&nbsp;<a role="menuitem" href="/feeds/news.xml"><img src="images/feed.png" /></a>
+      <li><ahref="http://openlifedata.org">the openLD group</a>. 
+      All content available via <li><arel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>
+      &nbsp;&nbsp;<li><arole="menuitem" href="/feeds/news.xml"><img src="images/feed.png" /></a>
     </small>
   </p>
 
